@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script> var socket = io(); </script>
+    <title>ML APP</title>
+</head>
+<body>
+    <div id="img_home"></div>
+    <script>
+        const modelLoaded = () => {
+            socket.emit('load', ml5.version);
+        }
+        const classifier = ml5.imageClassifier('MobileNet', modelLoaded);
+    
+        socket.on('predict', image => {
+            const img = new Image();
+            img.src = `data:image/jpg;base64,${image}`; 
+            classifier.classify(img, (err, data) => {
+                socket.emit('result', data);
+            });
+        });
+    </script>
+</body>
+</html>
