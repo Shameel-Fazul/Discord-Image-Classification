@@ -2,7 +2,6 @@ const http = require('http');
 const handler = require('serve-handler');
 const puppeteer = require("puppeteer");
 const fs  = require("fs");
-var url = require('url');
 const socketio = require('socket.io');
 const download = require('image-downloader');
 
@@ -53,4 +52,4 @@ client.on('message', async (msg) => {
     }
 });
 
-client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.yfoLT8hBrQ9PdIGreCk6AlpoP8o')
+client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.wRb9XTIOcEzZVPeeQVnkbNTJlmU')
