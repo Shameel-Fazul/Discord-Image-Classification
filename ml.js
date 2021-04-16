@@ -23,7 +23,7 @@ client.on('message', async (msg) => {
         console.log('[ML] > prediction request detected')
         const browser = await puppeteer.launch()
         const page = await browser.newPage()
-        await page.goto("http://localhost:3000/public/")
+        await page.goto("https://ml-discord-bot.herokuapp.com/public/")
         console.log('[ML] > page has loaded')
         page.on("console", async (res) => {
           msg.reply(res.text())
