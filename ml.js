@@ -52,4 +52,4 @@ client.on('message', async (msg) => {
     }
 });
 
-client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.wRb9XTIOcEzZVPeeQVnkbNTJlmU')
+client.login('#')
