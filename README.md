@@ -1,2 +1,2 @@
 # ML-Discord-Bot
-Machine learning discord bot using ml5.js
+Discord bot that classifies an image using machine learning 
