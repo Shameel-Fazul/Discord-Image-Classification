@@ -56,4 +56,4 @@ io.on('connection', socket => {
     });
 });
 
-client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.yfoLT8hBrQ9PdIGreCk6AlpoP8o');
+client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.i8WGLvoQnn4mRRXb1YurFtJNbsQ');
