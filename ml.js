@@ -2,6 +2,7 @@ const http = require('http');
 const handler = require('serve-handler');
 const puppeteer = require("puppeteer");
 const fs  = require("fs");
+var url = require('url');
 const socketio = require('socket.io');
 const download = require('image-downloader');
 
@@ -21,7 +22,7 @@ const io = socketio(server);
 client.on('message', async (msg) => {
     if (msg.content.length < 1) {
         console.log('[ML] > prediction request detected')
-        const browser = await puppeteer.launch()
+        const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
         const page = await browser.newPage()
         await page.goto("https://ml-discord-bot.herokuapp.com/public/")
         console.log('[ML] > page has loaded')
@@ -52,4 +53,4 @@ client.on('message', async (msg) => {
     }
 });
 
-client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.wRb9XTIOcEzZVPeeQVnkbNTJlmU')
+client.login('ODMxMDkwMjc2NTM3MzM1ODM4.YHQLIg.yfoLT8hBrQ9PdIGreCk6AlpoP8o')
