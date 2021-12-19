@@ -1,2 +1,2 @@
-# ML-Discord-Bot
-Discord bot that classifies an image using machine learning 
+# Discord Image Classification
+Discord bot to classify images with supervised machine learning using the ImageNet dataset
